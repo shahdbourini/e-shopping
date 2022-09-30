@@ -107,6 +107,99 @@
     margin-left: 9px;
 }
 
+
+/************** comments table ***********/
+
+.commentsTable h5{
+ font-weight: bold;
+ font-size: 25px;
+ line-height: 1.333333;
+ text-transform: uppercase;
+ padding-bottom: 12px;
+ color: #333;
+}
+
+.commentsTable p{
+font-size: 16px;
+line-height: 1.923;
+color: #888;
+padding-bottom: 20px;
+}
+
+.theComment{
+    border: 1px solid #d9d9d9;
+    border-radius: 2px;
+    margin-bottom: 20px;
+}
+
+.theComment textarea{
+    width: 100%;
+    min-height: 150px;
+    font-family: Poppins-Regular;
+    font-size: 17px;
+    line-height: 1.6923;
+    color: #333;
+    padding-right: 18px;
+    padding-left: 18px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    display: block;
+    outline: none;
+    border: none;
+}
+
+.commentsInput{
+    border: 1px solid #d9d9d9;
+    border-radius: 2px;
+    max-width: 286px;
+    margin-bottom: 20px;
+    
+}
+
+.commentsInput input{
+    width: 100%;
+    height: 50px;
+    font-size: 13px;
+    line-height: 1.6923;
+    color: #333;
+    padding-right: 18px;
+    padding-left: 18px;
+    display: block;
+    outline: none;
+    border: none;
+    overflow: visible;
+}
+
+.commentsTable button{
+    border-radius: 20px;
+    font-weight: 500;
+    background-color: #222;
+    min-width: 180px;
+    height: 40px;
+    font-size: 15px;
+    line-height: 1.466667;
+    text-transform: uppercase;
+    color: #fff;
+    justify-content: center;
+    -ms-align-items: center;
+    align-items: center;
+    display: flex;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+    padding-right: 15px;
+    padding-left: 15px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.commentsTable button:hover {
+    border-color: #717fe0;
+    background-color: #717fe0;
+    color: #fff;
+}
 /************ Second Col ***********/
 
 .searchInput{

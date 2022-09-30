@@ -6,9 +6,7 @@ import FirstCol from "../components/blogDetails/FirstCol";
 import SecondCol from "../components/blogDetails/SecondCol";
 
 function BlogDetails(props) {
-
   const { imgID, title, discription, fullDisc } = useParams();
-
 
   return (
     <>
@@ -31,6 +29,29 @@ function BlogDetails(props) {
                 </h4>
                 {/* <p>{discription}</p> */}
                 <p>{fullDisc}</p>
+              </div>
+
+              <div className="commentsTable">
+                <h5>Leave a Comment</h5>
+                <p>
+                  Your email address will not be published. Required fields are
+                  marked *
+                </p>
+                <form>
+                  <div className="theComment">
+                    <textarea name="cmt" placeholder="Comment..."></textarea>
+                  </div>
+                  <div className="commentsInput">
+                    <input type="text" name="name" placeholder="Name *" />
+                  </div>
+                  <div className="commentsInput">
+                    <input type="text" name="email" placeholder="Email *" />
+                  </div>
+                  <div className="commentsInput">
+                    <input type="text" name="web" placeholder="Website" />
+                  </div>
+                  <button>Post Comment</button>
+                </form>
               </div>
             </Col>
 
