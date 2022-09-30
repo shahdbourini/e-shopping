@@ -1,8 +1,12 @@
 import React from "react";
+import { useEffect } from "react";
 import { Row, Col } from "antd";
 import HeaderImg from "../components/headerImg/HeaderImg";
 
 function About(props) {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
   return (
     <>
       <div style={{ paddingBottom: `5%` }}></div>

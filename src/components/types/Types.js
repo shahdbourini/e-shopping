@@ -16,12 +16,12 @@ function Types(props) {
           >
             <div className="blockType">
               <div className="blockContents mask">
-                <a href="/" className="blockText">
+                <a href="/shop.html" className="blockText">
                   <span>Women</span>
                   <br />
                   <span>spring 2018</span>
                 </a>
-                <a className="shopText">SHOP NOW</a>
+                <Link to="/shop" className="shopText">SHOP NOW</Link>
               </div>
               <img src={process.env.PUBLIC_URL + "/images/women.webp"} />
             </div>
@@ -39,7 +39,7 @@ function Types(props) {
                   <br />
                   <span>spring 2018</span>
                 </a>
-                <a className="shopText">SHOP NOW</a>
+                <Link to="/shop" className="shopText">SHOP NOW</Link>
               </div>
               <img src={process.env.PUBLIC_URL + "/images/men.webp"} />
             </div>
@@ -57,7 +57,7 @@ function Types(props) {
                   <br />
                   <span>spring 2018</span>
                 </a>
-                <a className="shopText">SHOP NOW</a>
+                <Link to="/shop" className="shopText">SHOP NOW</Link>
               </div>
               <img src={process.env.PUBLIC_URL + "/images/accessories.webp"} />
             </div>

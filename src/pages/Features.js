@@ -6,6 +6,7 @@ import Total from "../components/cartTotals/Total"
 function Features(props) {
     return (
         <>
+        <div className="navBorder"></div>
        <div className="container tableSpace">
         <section className="section">
          <Row>

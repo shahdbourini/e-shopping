@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import { Route, Link, Routes, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { Row, Col } from "antd";
 import HeaderImg from "../components/headerImg/HeaderImg";
-import FirstCol from "../components/blogDetails/FirstCol";
 import SecondCol from "../components/blogDetails/SecondCol";
 
 function BlogDetails(props) {
