@@ -1,38 +1,88 @@
-.App {
-  text-align: center;
+/*** style for about page*/
+
+.p-b-148{
+    padding-bottom: 148px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.theStory{
+    padding-right: 85px;
+    padding-top: 7px;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.theStory h3{
+    font-size: 25px;
+    line-height: 1.2;
+    color: #333;
+    padding-bottom: 16px;
+    font-weight: bold;
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.theStory p{
+    font-size: 17px;
+    line-height: 1.7857;
+    color: #888;
+    
+}
+.theStoryPadding{
+    padding-bottom: 26px;
+    
 }
 
-.App-link {
-  color: #61dafb;
+.how-bor2, .how-bor1 {
+    position: relative;
+    /* z-index: 1; */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.how-bor2::before, .how-bor1::before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    border: 3px solid #ccc;
+
+}
+
+.how-bor1::before {
+    bottom: -21px;
+    left: -21px;
+}
+
+.how-bor2::before {
+    bottom: -21px;
+    right: -21px;
+}
+
+.hov-img0 {
+    display: block;
+    overflow: hidden;
+}
+
+
+
+.hov-img0 img {
+    width: 100%;
+    transition: transform .9s ease;
+}
+
+.hov-img0:hover img {
+	transform: scale(1.1);
+	transform-origin: 50% 50%;
+}
+
+.secondPar{
+    border-left: 5px solid #e6e6e6;
+    padding-left: 29px;
+    padding-bottom: 9px;
+    margin-top: 30px;
+    font-style: italic;
+}
+
+.secondPar span{
+    color: #555;
+    font-size: 13px;
+    line-height: 1.6923;
 }

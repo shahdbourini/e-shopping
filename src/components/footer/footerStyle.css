@@ -1,0 +1,116 @@
+.bg3 {
+    background-color: #222;
+}
+.p-b-32 {
+    padding-bottom: 32px;
+}
+.p-t-75 {
+    padding-top: 75px;
+}
+.listItems{
+    padding-bottom: 30px;
+    color:white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.p-b-10{
+    padding-bottom: 10px;
+}
+
+.theItem li a{
+    color: #b2b2b2;
+    font-size: 16px;
+}
+
+.wrap-emailInput {
+  position: relative;
+  /* border-bottom: 2px solid rgba(204,204,204,.1); */
+  width: 100%;
+}
+.emailInput{
+    background-color: transparent;
+    width: 100%;
+    color: #b2b2b2;
+    border-right: none;
+    font-size: 18px;
+    line-height: 1.923;
+}
+
+.emailInput::placeholder {
+    color: #b2b2b2;
+    opacity: 1;
+  }
+
+  
+.focus-emailInput {
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #6774d5;
+    left: 0;
+}
+.trans-04 {
+    -webkit-transition: all .4s;
+    -o-transition: all .4s;
+    -moz-transition: all .4s;
+    transition: all .4s;
+}
+.emailInput:focus+.focus-emailInput {
+     width: 100%;
+}
+
+.p-t-18 {
+    padding-top: 18px;
+}
+
+.subscribeButton{
+    border-radius: 23px;
+    background-color: #717fe0;
+    min-width: 185px;
+    height: 53px;
+    font-size: 18px;
+    line-height: 1.466667;
+    text-transform: uppercase;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.subscribeButton:hover{
+    color: #717fe0;
+    background-color: #fff;
+
+}
+
+.cl7 {
+    color: #b2b2b2;
+}
+
+.trans-04 {
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    -moz-transition: all .5s;
+    transition: all 0.5s;
+}
+
+.m-r-16 {
+    margin-right: 16px;
+}
+
+.fs-18 {
+    font-size: 18px;
+}
+
+.hov-cl1:hover {
+    color: #717fe0;
+}
+
+.size-201 {
+    max-width: 270px;
+}
+.f-15{
+    font-size: 15px;
+}
