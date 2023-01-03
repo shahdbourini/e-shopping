@@ -142,9 +142,9 @@ function Navbar() {
 
                   <li>
                     {" "}
-                    <a href="#" className="scroll-link">
+                    <span className="scroll-link">
                       <i class="fa fa-heart" aria-hidden="true"></i>
-                    </a>
+                    </span>
                   </li>
                 </div>
 
@@ -152,26 +152,27 @@ function Navbar() {
 
                   <li onClick={() => setLeftOpen(!leftOpen)}>
                     {" "}
-                    <a href="#" className="scroll-link">
+                    <span className="scroll-link">
                       <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                    </a>
+                    </span>
                   </li>
                 </div>
 
                 <div className="search-bar">
                   <div className="icons" onClick={onSearchActiveHandler}>
-                    <a href="#" className="scroll-link">
+                    <span  className="scroll-link">
                       <i class="fa fa-search" aria-hidden="true"></i>
-                    </a>
+                    </span>
                   </div>
-                  {searchActive ? <input
+                  {searchActive ? 
+                  <input
                     type="text"
                     placeholder="Search"
-                    className="inputSearch input2"
+                    className="inputSearch inputTransition"
                   /> : <input
                     type="text"
                     placeholder="Search"
-                    className="inputSearch input3"
+                    className="inputSearch"
                   />
 
                   }
