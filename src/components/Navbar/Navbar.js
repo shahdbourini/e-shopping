@@ -1,4 +1,4 @@
-import React, { useRef, useEffect,useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { BrowserRouter, NavLink } from "react-router-dom";
 import Cart from "../cart/Carts";
 import Banner from "../banner/Banner.js";
@@ -14,6 +14,9 @@ function Navbar() {
     { name: "About", href: "/about" },
     { name: "Contact", href: "/contact" },
   ];
+
+  const [searchActive, setSearchActive] = useState(false);
+  const [searchValue, setSearchValue] = useState("");
 
   const [leftOpen, setLeftOpen] = useState(false);
 
@@ -32,6 +35,16 @@ function Navbar() {
     about: aboutRef,
     services: servicesRef,
     tours: toursRef,
+  };
+
+  const onSeachActive = () => setSearchActive(false);
+  const onSearchActiveHandler = () => setSearchActive(!searchActive);
+  const onChangeSearchValueHandler = (e) => setSearchValue(e.target.value);
+  const searchRef = useRef();
+  const onSeachSumbit = (e) => {
+    e.preventDefault();
+    setSearchValue("");
+    setSearchActive(false);
   };
 
   function scrollLinksClickHandlers(e, href) {
@@ -62,6 +75,7 @@ function Navbar() {
   }
 
   useEffect(() => {
+
     window.addEventListener("scroll", function (e) {
       const scrollHeight = window.pageYOffset;
       const navHeight = navbarRef.current.getBoundingClientRect().height;
@@ -78,11 +92,13 @@ function Navbar() {
       //   topLinkRef.current.classList.remove("show-link");
       // }
     });
-    return () => {};
+    return () => { };
+
+
   }, []);
 
-  const closeCart =()=>{
-  setLeftOpen(false);
+  const closeCart = () => {
+    setLeftOpen(false);
   }
 
   return (
@@ -107,7 +123,7 @@ function Navbar() {
                       <NavLink
                         to={link.href}
                         className="scroll-link"
-                        // onClick={(e) => scrollLinksClickHandlers(e, link.href)}
+                      // onClick={(e) => scrollLinksClickHandlers(e, link.href)}
                       >
                         {link.name}
                       </NavLink>
@@ -117,32 +133,59 @@ function Navbar() {
               </div>
             </div>
 
-            <div className="links-container">
+
+
+
+            <div className="links-container icons-direction">
               <ul className="links">
-                <li>
-                  {" "}
-                  <a href="#" className="scroll-link">
-                    <i class="fa fa-search" aria-hidden="true"></i>
-                  </a>
-                </li>
-                <li>
-                  {" "}
-                  <a href="#" className="scroll-link">
-                    <i class="fa fa-heart" aria-hidden="true"></i>
-                  </a>
-                </li>
-                <li  onClick={() => setLeftOpen(!leftOpen)}>
-                  {" "}
-                  <a href="#" className="scroll-link">
-                  <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                  </a>
-                </li>
+                <div className="icons">
+
+                  <li>
+                    {" "}
+                    <a href="#" className="scroll-link">
+                      <i class="fa fa-heart" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                </div>
+
+                <div className="icons">
+
+                  <li onClick={() => setLeftOpen(!leftOpen)}>
+                    {" "}
+                    <a href="#" className="scroll-link">
+                      <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                </div>
+
+                <div className="search-bar">
+                  <div className="icons" onClick={onSearchActiveHandler}>
+                    <a href="#" className="scroll-link">
+                      <i class="fa fa-search" aria-hidden="true"></i>
+                    </a>
+                  </div>
+                  {searchActive ? <input
+                    type="text"
+                    placeholder="Search"
+                    className="inputSearch input2"
+                  /> : <input
+                    type="text"
+                    placeholder="Search"
+                    className="inputSearch input3"
+                  />
+
+                  }
+                 
+                </div>
+
               </ul>
             </div>
+
+            <div style={{ clear: 'both' }}></div>
           </div>
         </nav>
 
-       <Cart leftOpen={leftOpen} closeCart={closeCart} />
+        <Cart leftOpen={leftOpen} closeCart={closeCart} />
 
         {/* <Banner /> */}
       </header>
