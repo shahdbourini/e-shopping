@@ -5,7 +5,7 @@ import Banner from "../banner/Banner.js";
 import "./NavStyle.css";
 
 
-function Navbar() {
+function Navbar(outSideClick) {
   const links = [
     { name: "Home", href: "/home" },
     { name: "Shop", href: "/shop" },
@@ -16,13 +16,11 @@ function Navbar() {
   ];
 
   const [searchActive, setSearchActive] = useState(false);
-  const [searchValue, setSearchValue] = useState("");
 
-  const [leftOpen, setLeftOpen] = useState(false);
+  const [leftOpen, setLeftOpen] = useState(false); //for cart open and close
 
   const navbarRef = useRef(null);
   const linksContainerRef = useRef(null);
-  const topLinkRef = useRef(null);
   const linksRef = useRef(null);
 
   const homeRef = useRef(null);
@@ -39,67 +37,80 @@ function Navbar() {
 
   const onSeachActive = () => setSearchActive(false);
   const onSearchActiveHandler = () => setSearchActive(!searchActive);
-  const onChangeSearchValueHandler = (e) => setSearchValue(e.target.value);
-  const searchRef = useRef();
-  const onSeachSumbit = (e) => {
-    e.preventDefault();
-    setSearchValue("");
-    setSearchActive(false);
-  };
 
+  const closeCart = () => {
+    setLeftOpen(false);
+  }
+  
+  
   function scrollLinksClickHandlers(e, href) {
     // prevent default
     e.preventDefault();
     // navigate to specific spot
     const id = href.slice(1);
     const element = blocks[id].current;
-
+    
     const navHeight = navbarRef.current.getBoundingClientRect().height;
     // const containerHeight = linksContainerRef.current.getBoundingClientRect().height;
     const fixedNav = navbarRef.current.classList.contains("fixed-nav");
     let position = element.offsetTop + navHeight;
-
+    
     if (!fixedNav) {
       position = position - navHeight;
     }
     // if (navHeight > 82) {
-    //   position = position - containerHeight;
-    // }
-
-    window.scrollTo({
-      left: 0,
-      top: position,
-    });
-    // close
-    linksContainerRef.current.style.height = 0;
-  }
-
-  useEffect(() => {
-
-    window.addEventListener("scroll", function (e) {
-      const scrollHeight = window.pageYOffset;
-      const navHeight = navbarRef.current.getBoundingClientRect().height;
-      if (scrollHeight > navHeight) {
-        navbarRef.current.classList.add("fixed-nav");
-      } else {
-        navbarRef.current.classList.remove("fixed-nav");
-      }
-      // setup back to top link
-
-      // if (scrollHeight > 500) {
-      //   topLinkRef.current.classList.add("show-link");
-      // } else {
-      //   topLinkRef.current.classList.remove("show-link");
+      //   position = position - containerHeight;
       // }
-    });
-    return () => { };
+      
+      window.scrollTo({
+        left: 0,
+        top: position,
+      });
+      // close
+      linksContainerRef.current.style.height = 0;
+    }
+    
+    useEffect(() => {
 
+    // for fixed navbar after specific distance
+      window.addEventListener("scroll", function (e) {
+        const scrollHeight = window.pageYOffset;
+        const navHeight = navbarRef.current.getBoundingClientRect().height;
+        console.log(scrollHeight , navHeight);
+        if (scrollHeight > navHeight) {
+          navbarRef.current.classList.add("fixed-nav");
+        } else {
+          navbarRef.current.classList.remove("fixed-nav");
+        }
+  
+  
+        
+        // setup back to top link
+  
+        // if (scrollHeight > 500) {
+        //   topLinkRef.current.classList.add("show-link");
+        // } else {
+        //   topLinkRef.current.classList.remove("show-link");
+        // }
+      });
 
-  }, []);
+      
+      const checkIfClickedOutside = (e) => {
+        // If the menu is open and the clicked target is not within the menu,
+        // then close the menu
+        if (searchActive && homeRef.current && !homeRef.current.contains(e.target)) {
+          setSearchActive(false);
+        }
+      };
+  
+      document.addEventListener("mousedown", checkIfClickedOutside);
+  
+      return () => {
+        // Cleanup the event listener
+        document.removeEventListener("mousedown", checkIfClickedOutside);
+      };
+    }, [searchActive]);
 
-  const closeCart = () => {
-    setLeftOpen(false);
-  }
 
   return (
     <>
@@ -160,23 +171,24 @@ function Navbar() {
 
                 <div className="search-bar">
                   <div className="icons" onClick={onSearchActiveHandler}>
-                    <span  className="scroll-link">
+                    <span className="scroll-link">
                       <i class="fa fa-search" aria-hidden="true"></i>
                     </span>
                   </div>
-                  {searchActive ? 
-                  <input
-                    type="text"
-                    placeholder="Search"
-                    className="inputSearch inputTransition"
-                  /> : <input
-                    type="text"
-                    placeholder="Search"
-                    className="inputSearch"
-                  />
+                  {searchActive ?
+                    <input
+                      type="text"
+                      placeholder="Search"
+                      dir="ltr"
+                      className="inputSearch inputTransition"
+                    /> : <input
+                      type="text"
+                      placeholder="Search"
+                      className="inputSearch"
+                    />
 
                   }
-                 
+
                 </div>
 
               </ul>

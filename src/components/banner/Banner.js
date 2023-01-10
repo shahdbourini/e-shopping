@@ -20,7 +20,7 @@ function Banner () {
             <h3 className={item.title1Style}>{item.title}</h3>
             <h1 className={item.title2Style}>{item.description}</h1>
             <div className={item.ButtonStyle +" bannerButton"}>
-              <a href="#">{item.button}</a></div>
+              <a href="/shop">{item.button}</a></div>
           </div>
           {/* <section>
             <img src={item.userProfile} alt={item.user} />

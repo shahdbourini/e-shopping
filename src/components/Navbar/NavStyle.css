@@ -145,17 +145,21 @@ right: 0;
 top: 0;
 width:0;
 height: 37px;
-border: 1px solid white;
--moz-transition: width 0.6s, border 0.6s;
--ms-transition: width 0.6s, border 0.6s;
--o-transition: width.6s, border 0.6s;
--webkit-transition: width 0.6s, border 0.6s;
-transition: width 0.6s, border 0.6s;
+border: 0px solid white;
+-moz-transition: width 0.5s, border 0.5s;
+-ms-transition: width 0.5s, border 0.5s;
+-o-transition: width .5s, border 0.6s;
+-webkit-transition: width 0.5s, border 0.5s;
+transition: width 0.5s, border 0.5s;
 }
 
 .inputTransition{
 width: 100%;
 border: 1px solid #979797; 
+border-radius: 2px;
+padding-left: 1rem;
+font-size: 17px;
+color: black;
 -moz-transition: width 0.6s, border 0.6s;
 -ms-transition: width 0.6s, border 0.6s;
 -o-transition: width.6s, border 0.6s;
@@ -167,7 +171,7 @@ transition: width 0.6s, border 0.6s;
 
 .inputSearch::placeholder {
 text-align: left;
-padding-left: 10px;
+padding-left: 5px;
 }
 
 

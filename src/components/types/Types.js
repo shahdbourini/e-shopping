@@ -15,7 +15,7 @@ function Types(props) {
             lg={{ span: 8, offset: 0 }}
           >
             <div className="blockType">
-              <div className="blockContents mask">
+              <div className="blockContents">
                 <a href="/shop.html" className="blockText">
                   <span>Women</span>
                   <br />

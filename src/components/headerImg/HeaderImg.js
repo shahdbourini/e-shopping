@@ -1,6 +1,7 @@
 import React from "react";
 import "./headerImg.css";
 
+//for contact page 
 function HeaderImg(props) {
   return (
     <section
