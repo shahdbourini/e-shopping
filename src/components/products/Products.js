@@ -157,7 +157,7 @@ function Products(props) {
       </section>
 
       <Modal
-        visible={isModalVisible}
+        open={isModalVisible} // becouse Visible is updated to open key word in the last version
         onOk={handleOk}
         onCancel={handleCancel}
         width={1200}
