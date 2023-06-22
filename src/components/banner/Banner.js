@@ -22,12 +22,7 @@ function Banner () {
             <div className={item.ButtonStyle +" bannerButton"}>
               <a href="/shop">{item.button}</a></div>
           </div>
-          {/* <section>
-            <img src={item.userProfile} alt={item.user} />
-            <span>
-              Posted by <strong>{item.user}</strong>
-            </span>
-          </section> */}
+
         </div>
       ))}
     </Slider>

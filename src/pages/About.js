@@ -14,7 +14,12 @@ function About(props) {
       <div className="container">
         <section id="products" className="section p-b-116">
           <Row className="p-b-148">
-            <Col lg={{ span: 16, offset: 0 }}>
+            <Col xl={{ span: 16, offset: 0 }}
+               lg={{ span: 16, offset: 0 }}
+               md={{ span: 12, offset: 0 }}
+               sm={{ span: 24, offset: 0 }}
+               xs={{ span: 24, offset: 0 }}
+          >
               <div className="theStory theStoryPadding">
                 <h3>Our Story</h3>
                 <p>
@@ -50,7 +55,12 @@ function About(props) {
               </div>
             </Col>
 
-            <Col lg={{ span: 7, offset: 0 }}>
+            <Col xl={{ span: 11, offset: 1 }}
+               lg={{ span: 7, offset: 0 }}
+               md={{ span: 12, offset: 0 }}
+               sm={{ span: 24, offset: 0 }}
+               xs={{ span: 24, offset: 0 }}
+          >
               <div className="how-bor1 ">
                 <div className="hov-img0">
                   <img
@@ -74,8 +84,13 @@ function About(props) {
               </div>
             </Col>
 
-            <Col lg={{ span: 13, offset: 2 }}>
-              <div className="theStory">
+            <Col xl={{ span: 11, offset: 1 }}
+               lg={{ span: 13, offset: 2 }}
+               md={{ span: 12, offset: 0 }}
+               sm={{ span: 24, offset: 0 }}
+               xs={{ span: 24, offset: 0 }}
+          >
+              <div className="theStory paddingTop">
                 <h3>Our Mission</h3>
                 <p>
                   Mauris non lacinia magna. Sed nec lobortis dolor. Vestibulum

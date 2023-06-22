@@ -97,7 +97,108 @@
 }
 
 
+/****************** Media queries ****************/
 
+
+@media (min-width: 320px) and (max-width: 480px) { 
+    .section {
+        padding-top: 30px;
+    }
+
+    .blockType {
+        height: 160px;
+    }
+    .blockText :first-child {
+     font-size: 1.3rem;
+    }
+
+    .blockText :last-child {
+     font-size: 0.9rem;
+   }
+
+   .shopText {
+    bottom: 14px;
+    font-size: 13px;
+  }
+
+   .blockContents:after {
+    width: 76px;
+    bottom: 14px;
+	}
+	
+
+
+}
+
+@media (min-width: 481px) and (max-width: 768px) { 
+
+    .blockType {
+        height: 127px;
+    }
+    .blockText :first-child {
+     font-size: 1rem;
+    }
+
+    .blockText :last-child {
+     font-size: 0.8rem;
+   }
+   .blockText {
+    left: 4%;
+    top: 3px;
+}
+
+  .shopText {
+    bottom: 9px;
+    left: 4%;
+    font-size: 12px;
+} 
+  .blockContents:after {
+    width: 67px;
+    height: 2px;
+    bottom: 12px;
+    left: 4%;
+}
+
+
+}
+
+
+@media (min-width: 769px) and (max-width: 1200px) { 
+
+    .blockType {
+        height: 183px;
+    }
+    .blockText :first-child {
+     font-size: 1.5rem;
+    }
+
+    .blockText :last-child {
+     font-size: 1.1rem;
+   }
+   .blockText {
+    left: 4%;
+    top: 3px;
+}
+
+  .shopText {
+    bottom: 12px;
+    left: 4%;
+    font-size: 14px;
+} 
+  .blockContents:after {
+    width: 78px;
+    bottom: 11px;
+    left: 4%;
+}
+}
+
+
+@media only screen and (min-width: 1900px) {
+    .blockType {
+        height: 452px;
+    }
+  
+}
 
 
 

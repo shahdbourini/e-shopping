@@ -11,19 +11,21 @@ function Features(props) {
         <section className="section">
          <Row>
           <Col
-            // xs={{ span: 19, offset: 4 }}
-            // sm={{ span: 15, offset: 5 }}
-            // md={{ span: 12, offset: 6 }}
+            xs={{ span: 24, offset: 0 }}
+            sm={{ span: 24, offset: 0 }}
+            md={{ span: 11, offset: 1 }}
             lg={{ span: 12, offset: 0 }}
+            xl={{ span: 11, offset: 0 }}
           >
           <Checkout /> 
           </Col>
 
           <Col
-            // xs={{ span: 19, offset: 4 }}
-            // sm={{ span: 15, offset: 5 }}
-            // md={{ span: 12, offset: 6 }}
-            lg={{ span: 10, offset: 2 }}
+            xs={{ span: 24, offset: 0 }}
+            sm={{ span: 24, offset: 0 }}
+            md={{ span: 11, offset: 1 }}
+            lg={{ span: 11, offset: 1 }}
+            xl={{ span: 10, offset: 0 }}
           >
           <Total /> 
           </Col>

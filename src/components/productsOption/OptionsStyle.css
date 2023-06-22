@@ -1,28 +1,28 @@
 
-.pruductsType ul{
-    list-style-type: none;
-    overflow: hidden;
-    font-size: 1.1rem;
-    float: left;
+.pruductsType{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 36px 0;
 }
 
-.pruductsType ul li {
-    float: left;
-    display: block;
-    text-align: center;
-    margin-right: 2.5rem;
-    text-decoration: none;
-    color: var(--clr-gray-12);
-    cursor: pointer;
-    transition: color 0.3s linear;
-  }
+.pruductsType button {
+  margin-right: 2.5rem;
+  font-size: 15px;
+  line-height: 1.2;
+  border: none;
+  background: transparent;
+  color: var(--clr-gray-12);
+  cursor: pointer;
+  transition: border-color 0.5s linear;
+  border-bottom: 2px solid transparent;
+}
 
-  .pruductsType ul :hover{
-    padding-bottom: 0;
-    border-bottom-style: solid;
-    border-bottom-width: 1px;
-    color:var(--clr-black);
-  }
+.pruductsType button:hover{
+  border-bottom-color: black;
+}
+
 
   .filters{
     float: right;
@@ -41,6 +41,7 @@
     background-color: var(--clr-white);
     cursor: pointer;
     transition: background-color 0.5s,border-color 0.5s,color 0.5s;
+    margin-right: 5%;
   }
 
   .filters button:hover{
@@ -144,3 +145,22 @@
     color: var(--clr-black);
     font-size: 19px;
   }
+
+
+  /****************** Media queries ****************/
+
+
+@media (min-width: 320px) and (max-width: 768px) { 
+
+  .pruductsType button {
+    margin-bottom: 8px;
+}
+
+  .filters {
+      float: left;
+      margin-top: 27px;
+  }
+}
+
+
+

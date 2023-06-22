@@ -9,9 +9,9 @@ function Types(props) {
       <section id="about" className="section">
         <Row>
           <Col
-            // xs={{ span: 19, offset: 4 }}
-            // sm={{ span: 15, offset: 5 }}
-            // md={{ span: 12, offset: 6 }}
+            xs={{ span: 20, offset: 2 }}
+             sm={{ span: 22, offset: 1 }}
+            md={{ span: 8, offset: 0 }}
             lg={{ span: 8, offset: 0 }}
           >
             <div className="blockType">
@@ -27,9 +27,9 @@ function Types(props) {
             </div>
           </Col>
           <Col
-            // xs={{ span: 19, offset: 4 }}
-            // sm={{ span: 15, offset: 5 }}
-            // md={{ span: 12, offset: 6 }}
+            xs={{ span: 20, offset: 2 }}
+            sm={{ span: 22, offset: 1 }}
+            md={{ span: 8, offset: 0 }}
             lg={{ span: 8, offset: 0 }}
           >
             <div className="blockType">
@@ -45,9 +45,9 @@ function Types(props) {
             </div>
           </Col>
           <Col
-            // xs={{ span: 19, offset: 4 }}
-            // sm={{ span: 15, offset: 5 }}
-            // md={{ span: 12, offset: 6 }}
+            xs={{ span: 20, offset: 2 }}
+            sm={{ span: 22, offset: 1 }}
+            md={{ span: 8, offset: 0 }}
             lg={{ span: 8, offset: 0 }}
           >
             <div className="blockType">

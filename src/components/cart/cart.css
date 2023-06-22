@@ -141,5 +141,23 @@ margin-right: 8px;
 
 
 
+/******************** Media Query ******************/
 
+@media (min-width:320px) and (max-width:480px){
+    .contents{
+        width:100%;
+    }
+}
+
+@media (min-width:481px) and (max-width:768px){
+    .contents{
+        width:50%;
+    }
+}
+
+@media (min-width:769px) and (max-width:1200px){
+    .contents {
+        width: 37%;
+    }
+}
 

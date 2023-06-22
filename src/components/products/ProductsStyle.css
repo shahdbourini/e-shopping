@@ -352,3 +352,15 @@ input::-webkit-inner-spin-button {
 .next-slick3 {
     right: 0;
 }
+
+/******************* Media Query ************/
+
+@media  (min-width:320px) and (max-width:768px) {
+    .moreImages{
+        display: none;
+    }
+    .productTitle {
+        font-size: 21px;
+        padding-top: 50px;
+    }
+}

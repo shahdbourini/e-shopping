@@ -4,14 +4,14 @@
 
 .send-message{
     border: 1px solid #e6e6e6;
-    padding-right: 70px;
-    padding-left: 84px;
+    padding-right: 8%;
+    padding-left: 10%;
     padding-bottom: 70px;
     padding-top: 55px;
     height: 100%;
 }
 .div-title{
-    font-size: 24px;
+    /* font-size: 24px; */
     line-height: 1.5;
     color: #333;
     text-align: center;
@@ -41,9 +41,10 @@
 .email-div img{
     position: absolute;
     top: calc(50% - 9px);
-    left: 28px;
+    left: 23px;
     pointer-events: none;
-    width: 22px;
+    width: 24px;
+    height: auto;
 }
 
 .email-subject{
@@ -108,8 +109,6 @@
 
 .details p{
     max-width: 245px;
-    font-size: 17px;
-    line-height: 1.666667;
     color: #888;
     padding-top: 18px;
 }
@@ -117,3 +116,4 @@
 .blueColor{
     color: #717fe0 !important;
 }
+

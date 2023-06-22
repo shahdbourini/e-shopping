@@ -65,13 +65,13 @@ function ProductsOption({ childResFilter,title }) {
             <b>{title}</b> 
           </h2>
           <div className="pruductsType">
-            <ul>
+        
               {types.map((item, index) => (
-                <li key={index} onClick={() => filterProducts(item)}>
+                <button key={index} onClick={() => filterProducts(item)}>
                   {item}
-                </li>
+                </button >
               ))}
-            </ul>
+      
 
             <div className="filters">
               <button>Filter</button>

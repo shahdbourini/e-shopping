@@ -95,6 +95,7 @@ a {
 
 img:not(.logo) {
   width: 100%;
+  height: 100%;
 }
 
 img {
@@ -114,29 +115,32 @@ h4 {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
 h3 {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
 }
 
 h4 {
-  font-size: 0.875rem;
+  font-size: 1.1rem;
 }
 
 p {
   margin-bottom: 1.25rem;
+  font-size: 1rem;
   color: var(--clr-grey-5);
 }
 
 .container{
-  width: 100%;
-  padding: 0 73px;
+  /* height: 100%; */
+  margin: auto;
+  max-width: 80%;
+  width: 80%;
 }
 
 @media screen and (min-width: 800px) {
@@ -168,3 +172,17 @@ p {
   }
 }
 
+
+/************** Media query**************/
+
+@media (max-width: 1200px) {
+
+  .container{
+    width: 90%;
+    max-width: 90%;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+}

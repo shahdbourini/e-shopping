@@ -6,6 +6,7 @@
 .table{
     margin-right: -38px;
     margin-left: 25px;
+    border: 1px solid #e6e6e6;
 
 }
 
@@ -187,5 +188,33 @@ input.num-product {
     padding-right: 15px;
     padding-left: 15px;
     font-weight: 600;
+
+}
+
+
+/****************** Media queries ****************/
+
+
+@media (min-width: 320px) and (max-width: 768px) { 
+
+    .tableSpace {
+        padding-top: 0;
+    } 
+    .table {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .lastRow {
+        padding-left: 20px;
+    }
+    .table-shopping-cart .column-1 {
+        width: 84px;
+        padding-left: 20px;
+    }
+
+    .table-shopping-cart .table_row {
+        height: 156px;
+    }
 
 }

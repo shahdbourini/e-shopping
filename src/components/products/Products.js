@@ -104,7 +104,15 @@ function Products(props) {
       <section id="products" className="section p-t-39 p-b-140">
         <Row>
           {products.map((item, index) => (
-            <Col lg={{ span: 6, offset: 0 }}>
+            <Col 
+            xxl={{ span: 4, offset: 0 }}
+            xl={{ span: 6, offset: 0 }}
+            lg={{ span: 6, offset: 0 }}
+            md={{ span: 11, offset: 1 }}
+            sm={{ span: 22, offset: 2 }}
+            xs={{ span: 22, offset: 2 }}
+            
+            >
               <div key={index} className="productBlock">
                 <div className="product-img">
                   <img

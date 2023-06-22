@@ -135,55 +135,6 @@ body {
   color: #FFFFFF;
 }
 
-/* .slider-content section span {
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 12px;
-  display: inline-block;
-  text-align: left;
-  line-height: 1.4;
-  vertical-align: middle;
-  margin-left: 10px;
-}
-
-.slider-content section img {
-  width: 40px;
-  height: 40px;
-  border: solid 2px rgba(255, 255, 255, 0.5);
-  border-radius: 100%;
-  vertical-align: middle;
-}
-
-.slider-content section span strong {
-  color: #FFFFFF;
-  font-size: 14px;
-  display: block;
-} */
-
-@media (max-height: 500px) {
-  .slider-wrapper, .slide {
-    height: calc(100vh - 75px);
-  }    
-}
-
-@media (max-width: 640px) {
-  .slider-wrapper, .slide {
-    height: calc(80vh - 75px);
-  }    
-}
-
-/* @media (max-height: 600px) {
-  .slider-content .inner h3 {
-    font-size: 32px;
-  }    
-} */
-
-@media (max-width: 640px) {
-  .slider-content .inner h3 {
-    font-size: 32px;
-  }
-}
-
-
 
 
 
@@ -400,3 +351,76 @@ body {
 	right: -100%;
 }
 
+
+
+
+/***************** Media query ***************/
+
+
+
+@media (max-height: 500px) {
+  .slider-wrapper, .slide {
+    height: calc(100vh - 75px);
+  }    
+}
+
+
+
+@media (max-width: 640px) {
+  .slider-content .inner h3 {
+    font-size: 17px;
+  }
+  
+  .slider-wrapper, .slide {
+    height: calc(80vh - 75px);
+  }    
+  .slider-content .inner h1 {
+    font-size: 24px;
+    line-height: 2;
+  }
+
+  .bannerButton a {
+    border-radius: 33px;
+    min-width: 125px;
+    height: 37px;
+    font-size: 14px;
+    padding-left: 23px;
+    padding-top: 8px;
+}
+
+.previousButton, .nextButton {
+  width: 18px;
+  height: 19px;
+}
+
+}
+
+
+@media (min-width: 640px) and (max-width: 1200px) {
+  .slider-content .inner h3 {
+    font-size: 17px;
+  }
+  
+  .slider-wrapper, .slide {
+    height: calc(80vh - 75px);
+  }    
+  .slider-content .inner h1 {
+    font-size: 24px;
+    line-height: 2;
+  }
+
+  .bannerButton a {
+    border-radius: 33px;
+    min-width: 125px;
+    height: 37px;
+    font-size: 14px;
+    padding-left: 23px;
+    padding-top: 8px;
+}
+
+.previousButton, .nextButton {
+  width: 18px;
+  height: 19px;
+}
+
+}

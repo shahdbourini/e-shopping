@@ -20,7 +20,7 @@ function Carts(props) {
 
     <div className="sidebar-block" style={props.leftOpen? styles.sidebar : styles.NOsidebar } />
         <div className="contents"
-          style={{ right: props.leftOpen ? '0' : '-400px' }}
+          style={{ right: props.leftOpen ? '0' : '-700px' }}
         >
           <div className="cart-header">
             <div className="cartName">YOUR CART</div>
@@ -82,13 +82,13 @@ function Carts(props) {
               <div className="header-cart-total w-full">Total: $75.00</div>
               <div className="header-cart-buttons flex-w w-full">
                 <a
-                  href="features"
+                  href="/features"
                   className="cartButtons m-r-8"
                 >
                   View Cart
                 </a>
                 <a
-                  href="features"
+                  href="/features"
                   className="cartButtons"
                 >
                   Check Out

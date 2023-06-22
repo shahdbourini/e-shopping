@@ -32,7 +32,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route
-            path="/home"
+            path="/"
             element={<Home childResFilter={childResFilter} result={result} />}
           ></Route>
 

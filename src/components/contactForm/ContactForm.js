@@ -7,7 +7,12 @@ function ContactForm(props) {
     <div className="container">
       <section id="products" className="section p-b-116">
         <Row>
-          <Col lg={{ span: 11, offset: 1 }}>
+          <Col xl={{ span: 11, offset: 1 }}
+               lg={{ span: 11, offset: 1 }}
+               md={{ span: 12, offset: 0 }}
+               sm={{ span: 24, offset: 0 }}
+               xs={{ span: 24, offset: 0 }}
+          >
             <form>
               <div className="send-message">
                 <h4 className="div-title">Send Us A Message</h4>
@@ -37,7 +42,12 @@ function ContactForm(props) {
             </form>
           </Col>
 
-          <Col lg={{ span: 11, offset: 0 }}>
+          <Col xl={{ span: 11, offset: 1 }}
+               lg={{ span: 11, offset: 0 }}
+               md={{ span: 12, offset: 0 }}
+               sm={{ span: 24, offset: 0 }}
+               xs={{ span: 24, offset: 0 }}
+          >
             <div className="send-message">
               <div className="position">
                 <span className="position-icon">
